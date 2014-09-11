@@ -3,10 +3,10 @@
 class databaseConnect{
 
 	//Database connection parameters  
-	private $host="localhost";
-	private $user="root";
-	private $password="";
-	private $database="Group";
+	private $host=getenv('OPENSHIFT_MYSQL_DB_HOST');
+	private $user=getenv('OPENSHIFT_MYSQL_DB_USERNAME');
+	private $password=getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
+	private $database="smartenergy";
 	private $connection;
 	
 	

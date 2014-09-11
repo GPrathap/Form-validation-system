@@ -240,10 +240,10 @@
          	
          	$.ajax({
          		type:"post",
-         		url:"insert.php",
+         		url:"http://smartenergy-dulanja.rhcloud.com/insert.php",
          		data:"dataset="+JSON.stringify(info),
          		success:function(){
-         			 //alert(this.data);
+         			 alert(this.data);
          		}
          	});
 			
@@ -308,7 +308,7 @@
     	$("#getsemidetails,#getsemidetailshalls,#getsemidetailsvehicles").html(te);
     	$.ajax({
     		type:"GET",
-    		url:"getdata.php",
+    		url:"http://smartenergy-dulanja.rhcloud.com/getdata.php",
     		
     		data:info,
     		dataType:'json',
@@ -319,13 +319,13 @@
     		
     		,
     		error:function(XMLHttpRequest,textstatus,errorThrough){
-    			//alert("error : "+XMLHttpRequest.responsetext);
+    			alert("error : "+XMLHttpRequest.responsetext);
     		}
     		
     	});
     	$.ajax({
     		type:"GET",
-    		url:"getdatahalls.php",
+    		url:"http://smartenergy-dulanja.rhcloud.com/getdatahalls.php",
     		
     		data:infohalls,
     		dataType:'json',
@@ -336,13 +336,13 @@
     		
     		,
     		error:function(XMLHttpRequest,textstatus,errorThrough){
-    			//alert("error : "+XMLHttpRequest.responsetext);
+    		alert("error : "+XMLHttpRequest.responsetext);
     		}
     		
     	});
     	$.ajax({
     		type:"GET",
-    		url:"getdatavehicles.php",
+    		url:"http://smartenergy-dulanja.rhcloud.com/getdatavehicles.php",
     		data:infovehicle,
     		dataType:'json',
     		success:function(data){
@@ -352,7 +352,7 @@
     		
     		,
     		error:function(XMLHttpRequest,textstatus,errorThrough){
-    			//alert("error : "+XMLHttpRequest.responsetext);
+    			alert("error : "+XMLHttpRequest.responsetext);
     		}
     		
     	});
